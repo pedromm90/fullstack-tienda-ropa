@@ -1,0 +1,7 @@
+npm create vite@latest tienda-frontend
+
+cd tienda-frontend
+
+npm install
+
+Comenzar el proyecto: npm run dev

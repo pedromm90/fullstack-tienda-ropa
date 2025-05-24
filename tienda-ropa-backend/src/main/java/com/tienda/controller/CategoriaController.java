@@ -1,0 +1,28 @@
+package com.tienda.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.tienda.model.Categoria;
+import com.tienda.repository.CategoriaRepository;
+
+import java.util.List;
+
+// @CrossOrigin(origins = "http://localhost:5173")
+@RestController
+@RequestMapping("/api/categorias")
+public class CategoriaController {
+	
+	@Autowired
+	private CategoriaRepository repository;
+
+	@GetMapping
+	public List<Categoria> getAll() {
+		return repository.findAll();
+	}
+	
+	@PostMapping
+	public Categoria create(@RequestBody Categoria categoria) {
+		return repository.save(categoria);
+	}
+}

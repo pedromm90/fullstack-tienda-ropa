@@ -1,0 +1,18 @@
+package com.tienda.security;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class JwtUtil {
+
+	private String secret = "pedromune"; // Clave segura para producción
+	private int jwtExpirationInMs = 3600000; // 1 hora
+	
+	public String generatedToken;
+
+    JwtUtil(UsuarioRepository usuarioRepository) {
+        this.usuarioRepository = usuarioRepository;
+    }}
+		
+	}
+}

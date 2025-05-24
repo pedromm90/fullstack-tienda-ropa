@@ -1,0 +1,21 @@
+package com.tienda.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.tienda.model.ArticuloRopa;
+import com.tienda.repository.ArticuloRopaRepository;
+
+@RestController
+@RequestMapping("/api/articulos-ropa")
+public class ArticuloRopaController {
+	
+	@Autowired
+	private ArticuloRopaRepository repository;
+	
+	@GetMapping("/{id}")
+	public ArticuloRopa getById(@PathVariable Long id) {
+		return repository.findById(id).orElse(null);
+	}
+
+}

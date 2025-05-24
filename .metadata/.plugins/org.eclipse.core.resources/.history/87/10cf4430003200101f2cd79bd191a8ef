@@ -1,0 +1,7 @@
+package com.tienda.controller;
+
+import org.springframework.web.bind.annotation.*;
+
+public class CategoriaController {
+
+}
